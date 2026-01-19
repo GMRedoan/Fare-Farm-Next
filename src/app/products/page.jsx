@@ -17,7 +17,7 @@ const Products = () => {
                     Quality crops grown with care and sustainability
                 </p>
             </div>
-            <div className='grid grid-cols-1 md:grid md:grid-cols-4 gap-6 mx-12'>
+            <div className='grid grid-cols-1 md:grid md:grid-cols-4 gap-6 mx-12 mb-12'>
                 {
                     products.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                 }
