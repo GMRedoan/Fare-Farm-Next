@@ -21,7 +21,7 @@ const AddProductForm = () => {
     };
 
     try {
-      const res = await fetch("/api/products", {
+      const res = await fetch("https://fare-farm.vercel.app/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
