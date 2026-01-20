@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-linear-to-r from-gray-950 via-gray-800 to-gray-950 text-white">
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
 
         {/* Brand */}
         <div>
@@ -50,17 +50,17 @@ const Footer = () => {
         {/* Social */}
         <div>
           <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
-          <div className="flex gap-4 mt-2">
-            <a className="p-3 rounded-full bg-white/20 hover:bg-white/30 transition">
+          <div className="grid grid-cols-2 md:grid md:grid-cols-4 gap-4 mt-2">
+            <a className="p-6 md:p-5 rounded-full bg-white/20 hover:bg-white/30 transition">
               <FaFacebookF />
             </a>
-            <a className="p-3 rounded-full bg-white/20 hover:bg-white/30 transition">
+            <a className="p-6 md:p-5 rounded-full bg-white/20 hover:bg-white/30 transition">
               <FaInstagram />
             </a>
-            <a className="p-3 rounded-full bg-white/20 hover:bg-white/30 transition">
+            <a className="p-6 md:p-5 rounded-full bg-white/20 hover:bg-white/30 transition">
               <FaTwitter />
             </a>
-            <a className="p-3 rounded-full bg-white/20 hover:bg-white/30 transition">
+            <a className="p-6 md:p-5 rounded-full bg-white/20 hover:bg-white/30 transition">
               <FaLinkedinIn />
             </a>
           </div>

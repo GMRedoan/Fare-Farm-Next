@@ -15,6 +15,10 @@ const ProductDetails = async ({ params }) => {
 
     return (
         <div>
+            <div className='text-center mt-10'>
+                <h2 className='font-bold text-3xl md:text-5xl'>Details of your <span className='text-primary'>desired</span> products</h2>
+                <p className='text-accent mt-4'>Pure authentic product for you</p>
+            </div>
             <ProductDetailsCard product={product}></ProductDetailsCard>
         </div>
     )

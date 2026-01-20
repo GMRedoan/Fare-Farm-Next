@@ -8,12 +8,19 @@ import logo from "./logo.png";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import NavLink from "./NavLink";
+import { LuLogIn } from "react-icons/lu"
+import { CgLogOut } from "react-icons/cg";
+import { toast, ToastContainer } from "react-toastify";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
     const router = useRouter();
     const { loggedIn, logout } = useAuth();
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const notify = () => toast.success("You logged out successfully!")
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -48,6 +55,8 @@ const Navbar = () => {
                         <li><NavLink href="/home">Home</NavLink></li>
                         <li><NavLink href="/products">Products</NavLink></li>
                         <li><NavLink href="/addProduct">Add Products</NavLink></li>
+                        <li><NavLink href="/blog">Blog</NavLink></li>
+                        <li><NavLink href="/services">Services</NavLink></li>
                     </ul>
                 </div>
 
@@ -69,6 +78,9 @@ const Navbar = () => {
                     <li><NavLink href="/home">Home</NavLink></li>
                     <li><NavLink href="/products">Products</NavLink></li>
                     <li><NavLink href="/addProduct">Add Products</NavLink></li>
+                    <li><NavLink href="/blog">Blog</NavLink></li>
+                    <li><NavLink href="/services">Services</NavLink></li>
+
                 </ul>
             </nav>
 
@@ -81,21 +93,33 @@ const Navbar = () => {
                         href="/login"
                         className="btn btn-sm md:btn-md btn-primary rounded-xl text-white"
                     >
-                        Login
+                        Login <LuLogIn />
                     </Link>
                 ) : (
                     <button
                         onClick={() => {
                             logout();
                             router.push("/home");
+                            notify()
+                            Swal.fire({
+                                title: "Visit again!",
+                                text: "You logged out successfully!",
+                                icon: "success",
+                                confirmButtonText: "OK",
+                                confirmButtonColor: "#f59e0b"
+                            });
                         }}
                         className="btn btn-sm md:btn-md bg-red-500 rounded-xl text-white"
                     >
-                        Logout
+                        <CgLogOut />  Logout
                     </button>
                 )}
+                <ToastContainer autoClose={3000}
+                />
+
             </div>
         </nav>
+
     );
 };
 

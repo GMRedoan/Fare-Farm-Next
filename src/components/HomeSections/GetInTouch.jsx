@@ -3,7 +3,7 @@
 export default function GetInTouch() {
     return (
         <section className="pb-24 bg-base-100">
-            <div className="text-center my-10 mb-26">
+            <div className="text-center md:my-10 mb-10 md:mb-26">
                 <h2 className="text-3xl md:text-5xl font-bold"><span className="text-primary">Contact</span> With Us</h2>
                 <p className="text-accent mt-4">We available 24/7 for your message response</p>
             </div>
@@ -33,7 +33,8 @@ export default function GetInTouch() {
                         ></textarea>
                         <button
                             type="submit"
-                            className="w-full bg-yellow-500 text-white font-semibold py-4 rounded-xl hover:bg-yellow-600 transition"
+                            className="w-full bg-primary
+                             text-white font-semibold py-4 rounded-xl hover:bg-yellow-600 transition"
                         >
                             Send Message
                         </button>

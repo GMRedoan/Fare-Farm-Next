@@ -29,7 +29,7 @@ export default function Feedback() {
   return (
     <section className="py-24 bg-base-100 relative">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-base-300 mb-4">What Our <span className="text-primary">Customers</span> Say</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-base-300 mb-4">What Our <span className="text-primary">Customers</span> Say !</h2>
         <p className="text-accent mb-16 max-w-2xl mx-auto">
           Hear directly from our happy customers about their experience with Fare Farm.
         </p>

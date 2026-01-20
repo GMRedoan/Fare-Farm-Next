@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const AddProductForm = () => {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,14 @@ const AddProductForm = () => {
       });
 
       alert("✅ Product added successfully!");
+      Swal.fire({
+        title: "Thank you!",
+        text: "Product added successfully!",
+        icon: "success",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#f59e0b"
+      });
+
       form.reset();
     } catch (error) {
       console.error(error);
@@ -39,7 +48,7 @@ const AddProductForm = () => {
   };
 
   return (
-    <div className="bg-base-100 flex items-center justify-center px-4">
+    <div className="bg-base-100 flex items-center justify-center px-4 mb-20">
       <div className="card bg-base-200 shadow-2xl max-w-3xl w-full">
         <div className="card-body">
 

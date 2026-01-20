@@ -3,6 +3,8 @@
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import Swal from "sweetalert2";
 
 const LogInform = () => {
     const router = useRouter();
@@ -11,6 +13,7 @@ const LogInform = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const notify = () => toast.success("You logged in successfully!")
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -19,6 +22,14 @@ const LogInform = () => {
             document.cookie = "auth=true; path=/; max-age=86400";
             login()
             router.push("/products");
+            notify()
+            Swal.fire({
+                title: "Welcome!",
+                text: "You logged in successfully!",
+                icon: "success",
+                confirmButtonText: "OK",
+                confirmButtonColor:"#f59e0b"
+            });
         } else {
             setError("Invalid email or password");
         }
@@ -84,6 +95,9 @@ const LogInform = () => {
                     </button>
                 </form>
             </div>
+            <ToastContainer
+                autoClose={3000}
+            />
         </div>
     );
 };

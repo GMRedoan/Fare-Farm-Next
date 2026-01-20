@@ -31,9 +31,9 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-10 md:py-30 bg-base-100">
+    <section className="py-20 md:py-30 bg-base-100">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-base-300 mb-6">Why Choose <span className="text-primary">Fare Farm</span> ?</h2>
+        <h2 className="text-2xl md:text-5xl font-bold text-base-300 mb-6">Why Choose <span className="text-primary">Fare Farm</span> ?</h2>
         <p className="text-accent mb-12 max-w-2xl mx-auto">
           At Fare Farm, we focus on quality, sustainability, and innovation. Explore our unique features that set us apart.
         </p>

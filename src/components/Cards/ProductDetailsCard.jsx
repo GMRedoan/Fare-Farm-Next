@@ -4,7 +4,7 @@ import { FaStar, FaFire } from "react-icons/fa";
 
 const ProductDetailsCard = ({ product }) => {
   return (
-    <div className="min-h-screen bg-base-100 flex items-center justify-center px-4 py-10">
+    <div className="bg-base-100 flex items-center justify-center px-4 py-10">
       <div className="card lg:card-side bg-base-200 shadow-2xl max-w-5xl w-full">
 
         {/* Image Section */}

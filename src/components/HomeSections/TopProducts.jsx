@@ -21,7 +21,7 @@ const products = [
 
 export default function TopProducts() {
   return (
-    <section className="pb-24 bg-base-100 relative">
+    <section id="top-section" className="pb-24 bg-base-100 relative">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-base-300 mb-6">Top Products</h2>
         <p className="text-accent mb-16 max-w-2xl mx-auto">
