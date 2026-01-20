@@ -3,7 +3,7 @@ import React from 'react';
 
 const SingleProduct = async (_id) => {
     const res = await fetch(
-        `https://fare-farm-next.vercel.app/products/${_id}`,
+        `/api/products/${_id}`,
     );
 
     const data = await res.json();

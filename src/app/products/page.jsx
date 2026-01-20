@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
       const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://fare-farm-next.vercel.app/products')
+        fetch('/api/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
