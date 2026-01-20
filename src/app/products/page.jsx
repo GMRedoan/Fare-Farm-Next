@@ -1,11 +1,15 @@
 "use client"
 import ProductCard from '@/components/Cards/ProductsCard';
-import React, { use } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const productsPromise = fetch('http://localhost:3000/products')
-    .then(res => res.json())
-const Products = () => {
-    const products = use(productsPromise)
+ const Products = () => {
+      const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('/api/products')
+            .then(res => res.json())
+            .then(data => setProducts(data));
+    }, []);
 
     return (
         <div>
