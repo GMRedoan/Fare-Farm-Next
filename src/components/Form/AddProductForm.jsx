@@ -21,7 +21,7 @@ const AddProductForm = () => {
     };
 
     try {
-      const res = await fetch("/api/products", {
+      const res = await fetch("https://fare-farm-next.vercel.app/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +39,8 @@ const AddProductForm = () => {
       });
 
       form.reset();
-    } catch (error) {
+    }
+    catch (error) {
       console.error(error);
       alert("❌ Something went wrong!");
     } finally {
