@@ -5,8 +5,7 @@ import { FaLeaf, FaArrowRight } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section className="relative overflow-hidden md:
-    py-10">
+    <section className="relative overflow-hidden md:py-10">
       <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-yellow-700 to-gray-600"></div>
 
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>

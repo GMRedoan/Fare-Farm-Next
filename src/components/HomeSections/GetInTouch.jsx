@@ -33,8 +33,7 @@ export default function GetInTouch() {
                         ></textarea>
                         <button
                             type="submit"
-                            className="w-full bg-primary
-                             text-white font-semibold py-4 rounded-xl hover:bg-yellow-600 transition"
+                            className="w-full bg-primary text-white font-semibold py-4 rounded-xl hover:bg-yellow-600 transition"
                         >
                             Send Message
                         </button>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ThemeToggle from "../Theme/ThemeToggle";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "./logo.png";
@@ -86,8 +85,6 @@ const Navbar = () => {
 
             {/* Right */}
             <div className="flex items-center gap-2">
-                <ThemeToggle />
-
                 {!loggedIn ? (
                     <Link
                         href="/login"
